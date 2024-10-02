@@ -4,7 +4,6 @@
 <section class="bg-light my-5">
     <div class="container header">
         <div class="row">
-            <!-- cart -->
             <div class="col-lg-9">
                 <div class="card border shadow-0">
                     <div class="m-4">
@@ -13,7 +12,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link d-block">Kripik Nangka Original</a>
@@ -28,13 +27,13 @@
 
 
                         </div>
-                        <div class="container mt-5">
+                        <div class=" mt-5">
                             <div class="box-shadow">
                                 <h5>Pengiriman dan Pembayaran</h5>
-                                <div class="d-flex justify-content-between align-items-start mt-3">
+                                <div class="d-flex justify-content-between align-items-start mt-3 p-3 border">
                                     <div>
                                         <span class="label-badge">Utama</span>
-                                        <p class="fw-bold mb-0">Rumah (bengkel) - Joko Santoso (6282237650234)</p>
+                                        <p class="fw-bold mb-0">Rumah (bengkel) - Raka Bagus (6282237650234)</p>
                                         <p class="small-text">DS. Petungsewu RT 09 RW 03 Kec. Wagir Kab. Malang
                                             (bengkel), Wagir, Kab. Malang</p>
                                     </div>
@@ -43,30 +42,109 @@
 
                                 <div class="divider"></div>
 
-                                <div class="mb-3">
-                                    <label for="pengiriman" class="form-label fw-bold">Pilih Pengiriman</label>
-                                    <select class="form-select" id="pengiriman">
-                                        <option selected>Reguler</option>
-                                        <!-- Options lain jika ada -->
-                                    </select>
-                                </div>
+                                <div class="dropdown mb-4 col-md-9">
+                                    <h2> Pilih Metode Pengiriman:</h2>
+                                    <!-- Tombol untuk memilih metode pengiriman -->
+                                    <button class="btn btn-outline-secondary w-100 dropdown-toggle mb-4" type="button"
+                                        id="dropdownShipping" data-bs-toggle="dropdown" aria-expanded="false"
+                                        style="background-color: #fff; color: black; padding: 1rem 3rem; font-size: 1.5rem; font-weight: 500">
+                                        Pilih Metode Pengiriman
+                                    </button>
 
-                                <div class="mb-3">
-                                    <label for="kurir" class="form-label fw-bold">Pilih Kurir</label>
-                                    <div class="d-flex justify-content-between">
-                                        <select class="form-select" id="kurir">
-                                            <option selected>AnterAja (Rp25.900)</option>
-                                            <!-- Options lain jika ada -->
-                                        </select>
-                                        <p class="text-muted">Estimasi tiba 19 - 21 Sep</p>
-                                    </div>
+                                    <!-- Dropdown metode pengiriman -->
+                                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownShipping">
+                                        <li class="dropdown-item"
+                                            onclick="selectShipping('Reguler', 'Rp23.000 - Rp25.900', 'Estimasi tiba 24 - 28 Sep')">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="fw-bold fs-3">Reguler</span>
+                                                <span class="text-muted fs-5">Rp23.000 - Rp25.900</span>
+                                            </div>
+                                            <small class="text-muted fs-5">Estimasi tiba 24 - 28 Sep</small>
+                                        </li>
+                                        <li class="dropdown-item"
+                                            onclick="selectShipping('Kargo', 'Rp80.000', 'Estimasi tiba 25 - 30 Sep', 'Rekomendasi berat di atas 5kg')">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="fw-bold fs-3">Kargo</span>
+                                                <span class="text-muted fs-5">Rp80.000</span>
+                                            </div>
+                                            <small class="text-muted fs-5">Estimasi tiba 25 - 30 Sep</small>
+                                            <small class="text-danger fs-5">Rekomendasi berat di atas 5kg</small>
+                                        </li>
+                                        <li class="dropdown-item"
+                                            onclick="selectShipping('Ekonomi', 'Rp23.400', 'Estimasi tiba 25 - 28 Sep')">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="fw-bold fs-3">Ekonomi</span>
+                                                <span class="text-muted fs-5">Rp23.400</span>
+                                            </div>
+                                            <small class="text-muted fs-5">Estimasi tiba 25 - 28 Sep</small>
+                                        </li>
+                                    </ul>
                                 </div>
+                                <!-- Tempat untuk menampilkan dropdown kurir dengan desain yang sama -->
+                                <div id="selectedShipping" class="mt-3 col-md-9"></div>
+
+                                <script>
+                                    // Fungsi untuk menampilkan metode pengiriman yang dipilih di tombol dan menampilkan dropdown kurir
+                                    function selectShipping(method, price, estimate, note = '') {
+                                        // Ubah teks tombol menjadi pilihan pengiriman
+                                        const button = document.getElementById('dropdownShipping');
+                                        button.innerText = `${method} - ${price}`;
+
+                                        // Dropdown untuk kurir dengan desain serupa
+                                        const courierDropdown = `
+    <button class="btn btn-outline-secondary w-100 dropdown-toggle" type="button" id="dropdownCourier"
+        data-bs-toggle="dropdown" aria-expanded="false"
+        style="background-color: #fff; color: black; padding: 1rem 3rem; font-size: 1.5rem; font-weight: 500">
+        Pilih Kurir
+    </button>
+    <ul class="dropdown-menu w-75" aria-labelledby="dropdownCourier">
+        <li class="dropdown-item" onclick="selectCourier('JNE', 'Rp10.000', 'Estimasi tiba 1 - 3 hari')">
+            <div class="d-flex justify-content-between">
+                <span class="fw-bold fs-4">JNE</span>
+                <span class="text-muted fs-5">Rp10.000</span>
+            </div>
+            <small class="text-muted fs-5">Estimasi tiba 1 - 3 hari</small>
+        </li>
+        <li class="dropdown-item" onclick="selectCourier('TIKI', 'Rp11.500', 'Estimasi tiba 2 - 4 hari')">
+            <div class="d-flex justify-content-between">
+                <span class="fw-bold fs-4">TIKI</span>
+                <span class="text-muted fs-5">Rp11.500</span>
+            </div>
+            <small class="text-muted fs-5">Estimasi tiba 2 - 4 hari</small>
+        </li>
+        <li class="dropdown-item" onclick="selectCourier('POS Indonesia', 'Rp9.000', 'Estimasi tiba 3 - 5 hari')">
+            <div class="d-flex justify-content-between">
+                <span class="fw-bold fs-4">POS Indonesia</span>
+                <span class="text-muted fs-5">Rp9.000</span>
+            </div>
+            <small class="text-muted fs-5">Estimasi tiba 3 - 5 hari</small>
+        </li>
+        <li class="dropdown-item" onclick="selectCourier('SiCepat', 'Rp12.000', 'Estimasi tiba 1 - 3 hari')">
+            <div class="d-flex justify-content-between">
+                <span class="fw-bold fs-4">SiCepat</span>
+                <span class="text-muted fs-5">Rp12.000</span>
+            </div>
+            <small class="text-muted fs-5">Estimasi tiba 1 - 3 hari</small>
+        </li>
+    </ul>`;
+
+                                        // Tampilkan dropdown kurir di div "selectedShipping"
+                                        document.getElementById('selectedShipping').innerHTML = courierDropdown;
+                                    }
+
+                                    // Fungsi untuk menampilkan kurir yang dipilih di tombol
+                                    function selectCourier(courier, price, estimate) {
+                                        const courierButton = document.getElementById('dropdownCourier');
+                                        courierButton.innerText = `${courier} - ${price}`;
+                                    }
+                                </script>
+
 
                                 <div class="divider"></div>
 
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/BNI_logo.svg"
+                                        <img src="https://upload.wikimedia.org/wikipedia/id/5/55/BNI_logo.svg"
                                             alt="BNI Logo" width="40">
                                         <p class="fw-bold">BNI Virtual Account</p>
                                     </div>
@@ -80,22 +158,9 @@
                                         <span>Rp3.700</span>
                                         <input class="form-check-input" type="checkbox" checked>
                                     </div>
-                                    <button class="btn btn-link">i</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="border-top pt-4 mx-4 mb-4">
-                        <p><i class="fas fa-truck text-muted fa-lg"></i> Gratis Ongkir Setiap Pembelian diatas Rp
-                            500.000</p>
-                        <p class="text-muted">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                            ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut
-                            aliquip
-                        </p>
                     </div>
                 </div>
             </div>
@@ -148,8 +213,33 @@
                         </div>
 
                         <div class="mt-3">
-                            <a href="#" class="btn btn-success w-100 shadow-0 py-3 fs-4"> <i
-                                    class='bx bxs-check-shield me-1 bx-sm' style='color:#ffffff'></i> Beli Sekarang </a>
+                            <!-- Tombol untuk memicu modal -->
+                            <a href="#" class="btn btn-success w-100 shadow-0 py-3 fs-4" data-bs-toggle="modal"
+                                data-bs-target="#beliModal">
+                                <i class='bx bxs-check-shield me-1 bx-sm' style='color:#ffffff'></i> Beli Sekarang
+                            </a>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="beliModal" tabindex="-1" aria-labelledby="beliModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content ">
+                                        <div class="modal-body text-center">
+                                            <i class='bx bx-check bg-light p-3 fs-1 rounded-circle'></i><br>
+                                            <h2>Pesanan Tervalidasi</h2>
+                                            <p class="text-muted pt-3 fw-3">Terima kasih atas pembelian Anda.<br>
+                                                Paket
+                                                Anda
+                                                akan dikirim dalam waktu 2 hari<br> setelah pembelian Anda</p>
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Batal</button>
+                                            <button type="button" class="btn btn-success">Lanjutkan
+                                                Pembelian</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

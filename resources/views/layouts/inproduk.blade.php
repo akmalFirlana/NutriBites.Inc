@@ -28,7 +28,7 @@
                     <a href="#terms" class="nav-link">Favorit</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">Promo</a>
+                    <a href="#about" class="nav-link">Mendaftar</a>
                 </li>
             </ul>
             <li class="nav-item">
@@ -102,7 +102,8 @@
                             class="badge bg-success ms-2">20%</span></h1>
                 </div>
                 <p class="desc mt-4 text-muted fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit.</p>
                 <hr class="bawah">
                 <div class="jumlah">
                     <label>Jumlah</label>
@@ -117,31 +118,32 @@
                 <div class="d-flex">
                     <div class="button-group">
                         <input type="radio" id="svelt" name="frameworks" checked="" />
-                        <label for="svelt">Svelt</label>
+                        <label for="svelt">Manis</label>
                     </div>
 
                     <div class="button-group">
                         <input type="radio" id="react" name="frameworks" />
-                        <label for="react">React</label>
+                        <label for="react">Original</label>
                     </div>
 
                     <div class="button-group">
                         <input type="radio" id="vue" name="frameworks" />
-                        <label for="vue">Vue</label>
+                        <label for="vue">Pedas</label>
                     </div>
                     <div class="button-group">
                         <input type="radio" id="vua" name="frameworks" />
-                        <label for="vua">Vue</label>
+                        <label for="vua">Asam</label>
                     </div>
                     <div class="button-group">
                         <input type="radio" id="vui" name="frameworks" />
-                        <label for="vui">Vue</label>
+                        <label for="vui">coklat</label>
                     </div>
                 </div>
                 <div class="action row mt-5 text-center d-flex justify-content-intebetween">
                     <div class="col-md-4"></div>
-                    <button type="submit" class="btn btn-success mt-3 ms-3 col-md-5 rounded-pill px-2 py-3 fs-5">Beli
-                        Sekarang</button>
+                    <button type="submit" class="btn btn-success mt-3 ms-3 col-md-5 rounded-pill px-2 py-3 fs-5"
+                        onclick="window.location.href='{{ route('checkout') }}'">Beli Sekarang</button>
+
                 </div>
 
             </div>
@@ -158,10 +160,20 @@
                 terbaik yang
                 dipilih khusus untuk Anda!</p>
             <div class="row justify-content-between" style="margin: 0 7rem">
-                <div class="col-sm-3 procard">
-                    <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
-                        <div class="card-footer border-top border-gray-300 p-4">
+                <div class="col-sm-3 procard tw-rounded-3xl">
+                    <div class="card shadow position-relative" style="border-radius: 12px">
+                        <!-- Peringkat Gizi dengan Tooltip -->
+                        <div class="nutrition-badge position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="popover"
+                            data-bs-trigger="hover" data-bs-html="true">
+                            <span class="badge text-dark"
+                                style="background-image: url('{{ asset('image/list.png') }}'); background-size: cover; background-position: center; padding: 10px; display: inline-block; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#nutritionModal">A+</span>
+                        </div>
+
+                        <!-- Konten Card -->
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch" class="tw-rounded-t-2xl">
+                        <div onclick="location.href='{{ route('detail') }}';"
+                            class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
                             <div class="d-flex mt-3">
@@ -179,10 +191,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 procard">
-                    <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
-                        <div class="card-footer border-top border-gray-300 p-4">
+                <div class="col-sm-3 procard tw-rounded-3xl">
+                    <div class="card shadow position-relative" style="border-radius: 12px">
+                        <!-- Peringkat Gizi dengan Tooltip -->
+                        <div class="nutrition-badge position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="popover"
+                            data-bs-trigger="hover" data-bs-html="true">
+                            <span class="badge text-dark"
+                                style="background-image: url('{{ asset('image/list.png') }}'); background-size: cover; background-position: center; padding: 10px; display: inline-block; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#nutritionModal">A+</span>
+                        </div>
+
+                        <!-- Konten Card -->
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch" class="tw-rounded-t-2xl">
+                        <div onclick="location.href='{{ route('detail') }}';"
+                            class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
                             <div class="d-flex mt-3">
@@ -200,10 +222,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 procard">
-                    <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
-                        <div class="card-footer border-top border-gray-300 p-4">
+                <div class="col-sm-3 procard tw-rounded-3xl">
+                    <div class="card shadow position-relative" style="border-radius: 12px">
+                        <!-- Peringkat Gizi dengan Tooltip -->
+                        <div class="nutrition-badge position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="popover"
+                            data-bs-trigger="hover" data-bs-html="true">
+                            <span class="badge text-dark"
+                                style="background-image: url('{{ asset('image/list.png') }}'); background-size: cover; background-position: center; padding: 10px; display: inline-block; cursor: pointer;"
+                                data-bs-toggle="modal" data-bs-target="#nutritionModal">A+</span>
+                        </div>
+
+                        <!-- Konten Card -->
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch" class="tw-rounded-t-2xl">
+                        <div onclick="location.href='{{ route('detail') }}';"
+                            class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
                             <div class="d-flex mt-3">
@@ -221,27 +253,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 procard">
-                    <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
-                        <div class="card-footer border-top border-gray-300 p-4">
-                            <a href="#" class="h5">Kripik Nangka</a>
-                            <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
-                            <div class="d-flex mt-3">
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star-half' style='color:#d0e12b'></i>
-                                <span class="badge bg-success ms-2">4.7</span>
-                            </div>
-                            <div class="d-flex mt-3">
-                                <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
-                                <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
-                            </div>
-                        </div>
+                <div class="col-sm-3 procard tw-rounded-3xl" >
+            <div class="card shadow position-relative" style="border-radius: 12px">
+                <!-- Peringkat Gizi dengan Tooltip -->
+                <div class="nutrition-badge position-absolute top-0 end-0 mt-2 me-2" data-bs-toggle="popover"
+                    data-bs-trigger="hover" data-bs-html="true">
+                    <span class="badge text-dark"
+                        style="background-image: url('{{ asset('image/list.png') }}'); background-size: cover; background-position: center; padding: 10px; display: inline-block; cursor: pointer;"
+                        data-bs-toggle="modal" data-bs-target="#nutritionModal">A+</span>
+                </div>
+
+                <!-- Konten Card -->
+                <img src="{{ asset('image/dummi2.webp') }}" alt="black watch" class="tw-rounded-t-2xl">
+                <div onclick="location.href='{{ route('detail') }}';" class="card-footer border-top border-gray-300 p-4">
+                    <a href="#" class="h5">Kripik Nangka</a>
+                    <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
+                    <div class="d-flex mt-3">
+                        <i class='bx bxs-star' style='color:#d0e12b'></i>
+                        <i class='bx bxs-star' style='color:#d0e12b'></i>
+                        <i class='bx bxs-star' style='color:#d0e12b'></i>
+                        <i class='bx bxs-star' style='color:#d0e12b'></i>
+                        <i class='bx bxs-star-half' style='color:#d0e12b'></i>
+                        <span class="badge bg-success ms-2">4.7</span>
+                    </div>
+                    <div class="d-flex mt-3">
+                        <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
+                        <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
                     </div>
                 </div>
+            </div>
+        </div>
             </div>
             <div class="text-center mt-5">
                 <button class="btn btn-white">Muat Lebih</button>

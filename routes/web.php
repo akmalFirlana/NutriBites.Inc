@@ -2,13 +2,28 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LocationController;
+
+use App\Http\Controllers\AuthController;
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('/lokasi', [LocationController::class, 'index']);
+Route::get('/lokasi/kota/{id_provinsi}', [LocationController::class, 'getCities']);
+Route::get('/lokasi/kecamatan/{id_kota}', [LocationController::class, 'getDistricts']);
+Route::get('/lokasi/desa/{id_kecamatan}', [LocationController::class, 'getVillages']);
+Route::get('/lokasi/form', [LocationController::class, 'showForm']);
 Route::get('/tes', function () {
     return view('app');
-});
+}) ->name('app');
 
 Route::get('/det', function () {
     return view('layouts.inproduk');
-});
+}) ->name('detail');
 
 /*============================================user===========================================*/
 Route::get('/', function () {
@@ -42,6 +57,14 @@ Route::get('/cart', function () {
 Route::get('/checkout', function () {
     return view('user.checkout');
 })->name('checkout');
+
+Route::get('/daftar', function () {
+    return view('daftar');
+})->name('register');
+
+Route::get('/pembelian', function () {
+    return view('user.pembelian');
+})->name('pembelian');
 
 
 /*============================================penjual===========================================*/

@@ -56,9 +56,9 @@
                 </div>
                 <!-- Foto Informasi Gizi -->
                 <div class="col-md-6 mb-4 text-center">
-                    <img src="path-to-nutrition-image.jpg" alt="Informasi Gizi" class="img-fluid border rounded"
-                        style="max-width: 100%; height: auto;">
+                    
                     <p class="text-muted mt-2">Informasi Gizi Lengkap</p>
+                    <p>-</p>
                 </div>
             </div>
         </div>

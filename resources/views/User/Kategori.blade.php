@@ -7,42 +7,54 @@
         <div class=" border tw-bg-white tw-shadow-md tw-h-screen tw-px-3 pt-2 rounded-2">
             <!-- Dropdown Kategori -->
             <div class="mb-4">
-                <h5 class="tw-font-semibold">Kategori</h5>
+                <h5 class="tw-font-semibold p-3 pb-0 fs-4">Kategori</h5>
                 <ul class="list-group">
                     <li class="list-group-item tw-bg-gray-100 tw-text-gray-700">
                         <a class="tw-flex tw-justify-between tw-items-center" data-bs-toggle="collapse"
+                            href="#fashionWan" role="button" aria-expanded="false" aria-controls="fashionWan">
+                            Makanan
+                            <span class="tw-text-gray-400"><i class='bx bx-chevron-up bx-md'></i></span>
+                        </a>
+                        <div class="collapse" id="fashionWan">
+                            <ul class="tw-ml-4 tw-mt-2">
+                                <li><a href="#">Buah Kering</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list-group-item tw-bg-gray-100 tw-text-gray-700">
+                        <a class="tw-flex tw-justify-between tw-items-center" data-bs-toggle="collapse"
                             href="#fashionWanita" role="button" aria-expanded="false" aria-controls="fashionWanita">
-                            Fashion Wanita
-                            <span class="tw-text-gray-400">+</span>
+                            Minuman
+                            <span class="tw-text-gray-400"><i class='bx bx-chevron-up bx-md'></i></span>
                         </a>
                         <div class="collapse" id="fashionWanita">
                             <ul class="tw-ml-4 tw-mt-2">
-                                <li><a href="#">Atasan Wanita</a></li>
+                                <li><a href="#">Jus Buah</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="list-group-item tw-bg-gray-100 tw-text-gray-700">
                         <a class="tw-flex tw-justify-between tw-items-center" data-bs-toggle="collapse"
                             href="#fashionMuslim" role="button" aria-expanded="false" aria-controls="fashionMuslim">
-                            Fashion Muslim
-                            <span class="tw-text-gray-400">+</span>
+                            Bahan Makanan
+                            <span class="tw-text-gray-400"><i class='bx bx-chevron-up bx-md'></i></span>
                         </a>
                         <div class="collapse" id="fashionMuslim">
                             <ul class="tw-ml-4 tw-mt-2">
-                                <li><a href="#">Pakaian Muslim Pria</a></li>
-                                <li><a href="#">Atasan Muslim Wanita</a></li>
+                                <li><a href="#">Bumbu Kering</a></li>
+                                <li><a href="#">Bumbu Basah</a></li>
                             </ul>
                         </div>
                     </li>
                     <li class="list-group-item tw-bg-gray-100 tw-text-gray-700">
                         <a class="tw-flex tw-justify-between tw-items-center" data-bs-toggle="collapse"
                             href="#fashionPria" role="button" aria-expanded="false" aria-controls="fashionPria">
-                            Fashion Pria
-                            <span class="tw-text-gray-400">+</span>
+                            Buah & Sayur
+                            <span class="tw-text-gray-400"><i class='bx bx-chevron-up bx-md'></i></span>
                         </a>
                         <div class="collapse" id="fashionPria">
                             <ul class="tw-ml-4 tw-mt-2">
-                                <li><a href="#">Atasan Pria</a></li>
+                                <li><a href="#"> Buah</a></li>
                             </ul>
                         </div>
                     </li>
@@ -99,23 +111,23 @@
                             placeholder="Harga Maksimum" />
                     </div>
                 </div>
-                <div class="tw-mt-10">
-                    <button class="btn btn-success w-100 rounded-pill">Terapkan</button>
-                </div>
+                <div class="mx-auto text-center">
+                <button class="btn mt-3" style="border-radius: 25px; background-color: #01AB31; color:
+                    white; padding: 0.8rem 7rem; font-size: 1rem; font-weight: 500">Terapkan</button></div>
             </div>
 
         </div>
     </div>
     <div class="content col-md-9">
         <div class="hook">
-            <h1 class="fw-bold fs-3 mb-5 tw-pt-40">Filter</h1>
+            <h1 class="fw-bold fs-3 mb-5 tw-pt-40">Produk</h1>
         </div>
 
         <div class="pro">
             <div class="row justify-content-between" style="margin: 0 7rem">
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -136,7 +148,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -157,7 +169,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -178,7 +190,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -199,7 +211,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -220,29 +232,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
-                        <div class="card-footer border-top border-gray-300 p-4">
-                            <a href="#" class="h5">Kripik Nangka</a>
-                            <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
-                            <div class="d-flex mt-3">
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star' style='color:#d0e12b'></i>
-                                <i class='bx bxs-star-half' style='color:#d0e12b'></i>
-                                <span class="badge bg-success ms-2">4.7</span>
-                            </div>
-                            <div class="d-flex mt-3">
-                                <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
-                                <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-3 procard mb-4">
-                    <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -263,7 +253,7 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -284,7 +274,29 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
+                        <div class="card-footer border-top border-gray-300 p-4">
+                            <a href="#" class="h5">Kripik Nangka</a>
+                            <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
+                            <div class="d-flex mt-3">
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star-half' style='color:#d0e12b'></i>
+                                <span class="badge bg-success ms-2">4.7</span>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
+                                <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3 procard mb-4">
+                    <div class="card shadow">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -305,7 +317,49 @@
                 </div>
                 <div class="col-sm-3 procard mb-4">
                     <div class="card shadow">
-                        <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
+                        <div class="card-footer border-top border-gray-300 p-4">
+                            <a href="#" class="h5">Kripik Nangka</a>
+                            <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
+                            <div class="d-flex mt-3">
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star-half' style='color:#d0e12b'></i>
+                                <span class="badge bg-success ms-2">4.7</span>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
+                                <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 procard mb-4">
+                    <div class="card shadow">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
+                        <div class="card-footer border-top border-gray-300 p-4">
+                            <a href="#" class="h5">Kripik Nangka</a>
+                            <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
+                            <div class="d-flex mt-3">
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star' style='color:#d0e12b'></i>
+                                <i class='bx bxs-star-half' style='color:#d0e12b'></i>
+                                <span class="badge bg-success ms-2">4.7</span>
+                            </div>
+                            <div class="d-flex mt-3">
+                                <span class=" mb-0 text-gray me-2 fs-5">Rp 20.000</span>
+                                <span class="text-decoration-line-through fs-6" style="color:gray">Rp 25.000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 procard mb-4">
+                    <div class="card shadow">
+                        <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
                         <div class="card-footer border-top border-gray-300 p-4">
                             <a href="#" class="h5">Kripik Nangka</a>
                             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>

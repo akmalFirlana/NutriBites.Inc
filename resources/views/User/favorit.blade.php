@@ -3,13 +3,12 @@
 @section('content')
 <section class="bg-light mt-5">
     <div class="wish text-center position-fixed tw-w-100">
-        <i class='bx bx-heart' style='font-size:80px'></i>
-        <h1 class="text-center">Wishlist Kamu</h1>
+        <i class='bx bx-heart text-danger' style='font-size:80px'></i>
+        <h1 class="text-center text-danger">Wishlist Kamu</h1>
     </div>
     
     <div class="container pb-5 pt-5">
         <div class="row tw-pt-72">
-
             <div class="col-lg-12 tw-mt-72">
                 <div class="card border shadow-0">
                     <div class="m-4">
@@ -18,7 +17,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link">Kripik Nangka Original</a>
@@ -52,7 +51,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link">Kacang Pede</a>
@@ -86,7 +85,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link">Bumbu Dry Rub</a>
@@ -119,7 +118,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link">Bumbu Dry Rub</a>
@@ -152,7 +151,7 @@
                             <div class="col-lg-5">
                                 <div class="me-lg-5">
                                     <div class="d-flex">
-                                        <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                                        <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                                             style="width: 96px; height: 96px;" />
                                         <div class="">
                                             <a href="#" class="nav-link">Bumbu Dry Rub</a>
