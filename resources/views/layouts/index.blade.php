@@ -6,17 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite('resources/css/app.css')
     @vite('resources/scss/app.scss')
-    @vite('resources/js/app.js')
+  
+    <!-- Optional JavaScript dan Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Laravel</title>
 </head>
 
 <body>
-
     <div class="navigation mb-2">
         <div class="nav-center container d-flex">
             <a href="{{ route('home') }}" class="d-flex">
-                <img class="logo-img" src="{{ asset('image/NutriBites.svg') }}" style="width: 120px;" alt="Logok"> </a>
+                <img class="logo-img" src="{{ asset('image/NutriBites.svg') }}" style="width: 120px;" alt="Logok">
+            </a>
 
             <ul class="nav-list d-flex mt-1">
                 <li class="nav-item">
@@ -29,9 +34,10 @@
                     <a href="{{ route('favorit') }}" class="nav-link">Favorit</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('promo') }}" class="nav-link">Buka Toko</a>
+                    <a href="{{ route('register') }}" class="nav-link">Mendaftar</a>
                 </li>
             </ul>
+
             <li class="nav-item">
                 <form class="form-s">
                     <button>
@@ -46,12 +52,12 @@
                     <button class="reset" type="reset">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
-                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                         </svg>
                     </button>
                 </form>
             </li>
+
             <div class="icons d-flex">
                 <a href="{{ route('cart') }}" class="icon me-4">
                     <i class="bx bx-cart"></i>
@@ -60,14 +66,13 @@
 
                 <label class="popup">
                     <input type="checkbox">
-                    <div class="profile-icon" tabindex="0">
+                    <div class="profile-icon tw-cursor-pointer" tabindex="0">
                         <i class="bx bx-user" style="font-size: 20px;"></i>
                     </div>
                     <nav class="popup-window">
-                        <legend class="mh">Actions</legend>
                         <ul>
                             <li>
-                                <button class="mh">
+                                <button class="mh" data-bs-toggle="modal" data-bs-target="#editProfileModal">
                                     <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
                                         stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -76,39 +81,13 @@
                                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                         <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                     </svg>
-                                    <span>Collaborators</span>
+                                    <span>Profil</span>
                                 </button>
                             </li>
                             <li>
-                                <button class="mh">
-                                    <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-                                        stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-                                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-                                    </svg>
-                                    <span>Magic Link</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="mh">
-                                    <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-                                        stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <rect ry="2" rx="2" height="13" width="13" y="9" x="9"></rect>
-                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                                    </svg>
-                                    <span>Clone</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button class="mh">
-                                    <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2"
-                                        stroke="currentColor" fill="none" viewBox="0 0 24 24" height="14" width="14"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
-                                    </svg>
-                                    <span>Edit</span>
+                                <button class="mh" onclick="location.href='/pembelian'">
+                                    <i class='bx bx-history fs-4'></i>
+                                    <span>Pembelian</span>
                                 </button>
                             </li>
                             <hr>
@@ -120,13 +99,12 @@
                                         <line y2="18" x2="6" y1="6" x1="18"></line>
                                         <line y2="18" x2="18" y1="6" x1="6"></line>
                                     </svg>
-                                    <span>Delete</span>
+                                    <span>Logout</span>
                                 </button>
                             </li>
                         </ul>
                     </nav>
                 </label>
-
             </div>
 
             <div class="hamburger">
@@ -134,11 +112,49 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal diletakkan di luar navigasi atau elemen lainnya -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Input Nama -->
+                        <div class="mb-3">
+                            <label for="userName" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="userName" value="John Doe">
+                        </div>
+                        <!-- Input Email -->
+                        <div class="mb-3">
+                            <label for="userEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="userEmail" value="johndoe@example.com">
+                        </div>
+                        <!-- Input Alamat -->
+                        <div class="mb-3">
+                            <label for="userAddress" class="form-label">Alamat</label>
+                            <input type="text" class="form-control" id="userAddress"
+                                value="Jl. Kebon Kacang No. 23, Jakarta">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary">Simpan Perubahan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <hr class="hr" style="margin-top: 22px;">
 
     <div>
         @yield('content')
-        
+
     </div>
 
 
@@ -274,7 +290,7 @@
             NutriBites © 2024, All Rights Reserved
         </div>
     </footer>
-
+    @vite('resources/js/app.js')
     <script>// Get the elements
         const userIcon = document.getElementById('userIcon');
         const dropdownMenu = document.getElementById('dropdownMenu');
@@ -291,7 +307,15 @@
                 dropdownMenu.style.display = 'none';
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                return new bootstrap.Popover(popoverTriggerEl)
+            })
+        });
     </script>
+
 </body>
 
 </html>

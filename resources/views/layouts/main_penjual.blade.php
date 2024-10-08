@@ -7,7 +7,7 @@
     <title>Landingpage</title>
     @vite('resources/css/app.css')
     @vite('resources/scss/app.scss')
-    @vite('resources/js/app.js')
+
     <link rel="stylesheet" href="{{ asset('css/penjual.css') }}">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -121,6 +121,7 @@
     <!--========== MAIN JS ==========-->
     <script src="{{ asset('js/nav.js') }}"></script>
     <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    @vite('resources/js/app.js')
 </body>
-
+    
 </html>

@@ -2,13 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LocationController;
+
+use App\Http\Controllers\AuthController;
+
 Route::get('/tes', function () {
     return view('app');
-});
+}) ->name('app');
 
 Route::get('/det', function () {
     return view('layouts.inproduk');
-});
+}) ->name('detail');
 
 /*============================================user===========================================*/
 Route::get('/', function () {
@@ -42,6 +46,14 @@ Route::get('/cart', function () {
 Route::get('/checkout', function () {
     return view('user.checkout');
 })->name('checkout');
+
+Route::get('/daftar', function () {
+    return view('daftar');
+})->name('register');
+
+Route::get('/pembelian', function () {
+    return view('user.pembelian');
+})->name('pembelian');
 
 
 /*============================================penjual===========================================*/

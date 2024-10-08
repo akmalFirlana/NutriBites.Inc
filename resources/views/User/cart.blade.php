@@ -13,7 +13,7 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                    <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                       style="width: 96px; height: 96px;" />
                     <div class="">
                       <a href="#" class="nav-link">Kripik Nangka Original</a>
@@ -39,8 +39,8 @@
               <div
                 class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i
-                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border p-0 icon-hover-primary"><i
+                      class="bx bxs-heart bx-md px-1 text-danger"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -50,7 +50,7 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                    <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                       style="width: 96px; height: 96px;" />
                     <div class="">
                       <a href="#" class="nav-link">Kacang Pede</a>
@@ -76,8 +76,8 @@
               <div
                 class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i
-                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border p-0 icon-hover-primary"><i
+                      class="bx bx-heart bx-md px-1 text-danger"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -87,7 +87,7 @@
               <div class="col-lg-5">
                 <div class="me-lg-5">
                   <div class="d-flex">
-                    <img src="{{ asset('image/dummi.jpg') }}" class="border rounded me-3"
+                    <img src="{{ asset('image/dummi2.webp') }}" class="border rounded me-3"
                       style="width: 96px; height: 96px;" />
                     <div class="">
                       <a href="#" class="nav-link">Bumbu Dry Rub</a>
@@ -113,8 +113,8 @@
               <div
                 class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
                 <div class="float-md-end">
-                  <a href="#!" class="btn btn-light border px-2 icon-hover-primary"><i
-                      class="fas fa-heart fa-lg px-1 text-secondary"></i></a>
+                  <a href="#!" class="btn btn-light border p-0 icon-hover-primary"><i
+                      class="bx bx-heart bx-md px-1 text-danger"></i></a>
                   <a href="#" class="btn btn-light border text-danger icon-hover-danger"> Remove</a>
                 </div>
               </div>
@@ -188,7 +188,7 @@
     <div class="row justify-content-between" style="margin: 0 7rem">
       <div class="col-sm-3 procard">
         <div class="card shadow">
-          <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+          <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
           <div class="card-footer border-top border-gray-300 p-4">
             <a href="#" class="h5">Kripik Nangka</a>
             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -209,7 +209,7 @@
       </div>
       <div class="col-sm-3 procard">
         <div class="card shadow">
-          <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+          <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
           <div class="card-footer border-top border-gray-300 p-4">
             <a href="#" class="h5">Kripik Nangka</a>
             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -230,7 +230,7 @@
       </div>
       <div class="col-sm-3 procard">
         <div class="card shadow">
-          <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+          <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
           <div class="card-footer border-top border-gray-300 p-4">
             <a href="#" class="h5">Kripik Nangka</a>
             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>
@@ -251,7 +251,7 @@
       </div>
       <div class="col-sm-3 procard">
         <div class="card shadow">
-          <img src="{{ asset('image/dummi.jpg') }}" alt="black watch">
+          <img src="{{ asset('image/dummi2.webp') }}" alt="black watch">
           <div class="card-footer border-top border-gray-300 p-4">
             <a href="#" class="h5">Kripik Nangka</a>
             <h3 class="h6 fw-light text-gray mt-2">Kripik yang terbuat dari buah nangka pilihan</h3>

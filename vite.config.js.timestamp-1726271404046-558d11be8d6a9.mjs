@@ -1,6 +1,6 @@
 // vite.config.js
-import { defineConfig } from "file:///D:/laragon/www/LastNutri/node_modules/vite/dist/node/index.js";
-import laravel from "file:///D:/laragon/www/LastNutri/node_modules/laravel-vite-plugin/dist/index.js";
+import { defineConfig } from "file:///D:/laragon/www/NutriBites.Inc/node_modules/vite/dist/node/index.js";
+import laravel from "file:///D:/laragon/www/NutriBites.Inc/node_modules/laravel-vite-plugin/dist/index.js";
 var vite_config_default = defineConfig({
   plugins: [
     laravel({
